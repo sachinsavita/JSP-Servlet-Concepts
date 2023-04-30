@@ -1,0 +1,30 @@
+
+***               "Servlet" interface
+
+1. Servlet is the interface inside javax.servlet package.
+2. Servlet interface has 5 methods/life cycle.
+   
+              //As soon as Servlet object created init method call
+(Important)   a. public abstract void init(javax.servlet.ServletConfig);
+              b. public ServletConfig getServletConfig();
+              //To process request service method will call
+(Important)   c. public void service(javax.servlet.ServletRequest, javax.servlet.ServletResponse);
+              d. public abstract java.lang.String getServletInfo();
+              //Just before destroying servlet destroy method call
+(Important)   e. public abstract void destroy();
+
+
+****                "GenericServlet" Abstract class 
+                
+                *(It overrides all methods of Servlet interface except service(), we have to give its implementation) 
+                *Does'nt matter if its a get or post method            
+                
+1. Package: javax.servlet
+2. This also implements "Servlet" interface
+3. Having only 4 methods
+4. abstract void service(ServletRequest arg0, ServletResponse arg1);
+
+***                  "HttpServlet" class (It supports protocol specific functionality)
+
+1. It gives protocol specific methods like doPost(), doGet(), doPut() etc.
+ 
