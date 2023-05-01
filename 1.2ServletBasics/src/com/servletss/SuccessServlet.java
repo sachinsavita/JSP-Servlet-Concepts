@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SuccessServlet extends HttpServlet{
 	
+	//doPost method of service
 	public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException
 	{
 		res.setContentType("text/html");
